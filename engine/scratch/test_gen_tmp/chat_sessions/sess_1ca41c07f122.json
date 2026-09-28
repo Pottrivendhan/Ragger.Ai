@@ -1,0 +1,27 @@
+{
+  "session_id": "sess_1ca41c07f122",
+  "workspace_id": "default",
+  "title": "working hours",
+  "messages": [
+    {
+      "message_id": "msg_d24d0dc2",
+      "role": "user",
+      "content": "working hours",
+      "timestamp": "2026-09-24T15:17:58.978481Z",
+      "valid_citations": [],
+      "unverified_citation_keys": [],
+      "has_insufficient_evidence": false
+    },
+    {
+      "message_id": "msg_1f08c93e",
+      "role": "assistant",
+      "content": "Employee working hours are strictly 9:00 AM to 5:00 PM EST Monday through Friday [... ].",
+      "timestamp": "2026-09-24T15:17:59.236381Z",
+      "valid_citations": [],
+      "unverified_citation_keys": [],
+      "has_insufficient_evidence": false
+    }
+  ],
+  "created_at": "2026-09-24T15:17:58.978481Z",
+  "updated_at": "2026-09-24T15:17:59.236381Z"
+}

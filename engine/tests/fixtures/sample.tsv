@@ -1,0 +1,4 @@
+gene_id	symbol	expression_level	chromosome
+ENSG0001	BRCA1	12.45	chr17
+ENSG0002	TP53	45.12	chr17
+ENSG0003	EGFR	8.32	chr7

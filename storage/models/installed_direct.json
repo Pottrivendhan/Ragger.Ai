@@ -1,0 +1,28 @@
+{
+  "bge-small-en-v1.5:onnx:default-v1": {
+    "model_key": "bge-small-en-v1.5:onnx:default-v1",
+    "model_id": "bge-small-en-v1.5",
+    "format": "onnx",
+    "revision": "default-v1",
+    "category": "embedding",
+    "size_bytes": 133093490,
+    "sha256": "828e1496d7fabb79cfa4dcd84fa38625c0d3d21da474a00f08db0f559940cf35",
+    "file_path": "C:\\Users\\POTTRIVENDHAN\\Ragger.ai\\storage\\models\\embedding\\bge-small-en-v1.5.onnx",
+    "installed_at": "2026-09-18T15:18:39.136305+00:00",
+    "status": "ready",
+    "runtime_model_ref": "C:\\Users\\POTTRIVENDHAN\\Ragger.ai\\storage\\models\\embedding\\bge-small-en-v1.5.onnx"
+  },
+  "qwen2.5-1.5b-instruct:gguf:q4_k_m-v1": {
+    "model_key": "qwen2.5-1.5b-instruct:gguf:q4_k_m-v1",
+    "model_id": "qwen2.5-1.5b-instruct",
+    "format": "gguf",
+    "revision": "q4_k_m-v1",
+    "category": "generation",
+    "size_bytes": 1117320736,
+    "sha256": "6a1a2eb6d15622bf3c96857206351ba97e1af16c30d7a74ee38970e434e9407e",
+    "file_path": "C:\\Users\\POTTRIVENDHAN\\Ragger.ai\\storage\\models\\generation\\qwen2.5-1.5b-instruct-q4_k_m.gguf",
+    "installed_at": "2026-09-21T17:44:41.102222+00:00",
+    "status": "ready",
+    "runtime_model_ref": "C:\\Users\\POTTRIVENDHAN\\Ragger.ai\\storage\\models\\generation\\qwen2.5-1.5b-instruct-q4_k_m.gguf"
+  }
+}

@@ -1,0 +1,117 @@
+[
+  {
+    "original_query": "The Grumble Family auther name?",
+    "normalized_query": "What is the author of The Grumble Family?",
+    "top_retrieval_evidence": "[chk_src_574c_bnd_00054_80fd8b2b] (p.51)",
+    "evidence_sufficiency": true,
+    "answer": "The poem 'The Grumble Family' is authored by Lucy Maud Montgomery [chk_src_574c_bnd_00054_80fd8b2b]. In this poem, Montgomery illustrates a dissatisfied family dwelling on 'Complaining Street' to warn readers against adopting a perpetual habit of grumbling and discontentment.",
+    "citations": [
+      "Class_10_English_2024_Edition-www.tntextbooks.in.pdf (Page 51) [chk_src_574c_bnd_00054_80fd8b2b]"
+    ],
+    "provider": "test_deterministic",
+    "model": "test_deterministic",
+    "retrieval_latency_ms": 1734.0,
+    "generation_latency_ms": 578.0,
+    "total_latency_ms": 2437.0
+  },
+  {
+    "original_query": "who is Dr. Ashok T. Krishnan\u2019s",
+    "normalized_query": "Who is Dr. Ashok T. Krishnan?",
+    "top_retrieval_evidence": "[chk_src_574c_bnd_00069_45b9687e] (p.63)",
+    "evidence_sufficiency": true,
+    "answer": "Dr. Ashok T. Krishnan is a renowned child specialist (pediatrician) in the story 'Zigzag' [chk_src_574c_bnd_00069_45b9687e]. His clinic is described as usually sounding like an ancient Chinese torture chamber due to the cries, yells, and sobs of his young patients. He is married to Mrs. Krishnan, a talented artist, and is the father of Arvind and Maya.",
+    "citations": [
+      "Class_10_English_2024_Edition-www.tntextbooks.in.pdf (Page 63) [chk_src_574c_bnd_00069_45b9687e]"
+    ],
+    "provider": "test_deterministic",
+    "model": "test_deterministic",
+    "retrieval_latency_ms": 125.0,
+    "generation_latency_ms": 875.0,
+    "total_latency_ms": 1094.0
+  },
+  {
+    "original_query": "unit 1 poem author?",
+    "normalized_query": "What is the author of the poem in Unit 1?",
+    "top_retrieval_evidence": "None",
+    "evidence_sufficiency": false,
+    "answer": "Based on the provided documents, I could not find information regarding the author of the poem in Unit 1.",
+    "citations": [],
+    "provider": "test_deterministic",
+    "model": "test_deterministic",
+    "retrieval_latency_ms": 125.0,
+    "generation_latency_ms": 313.0,
+    "total_latency_ms": 594.0
+  },
+  {
+    "original_query": "author of book",
+    "normalized_query": "What is the author of the book?",
+    "top_retrieval_evidence": "None",
+    "evidence_sufficiency": true,
+    "answer": "The selected knowledge base does not provide information about a single author of the entire book.",
+    "citations": [],
+    "provider": "test_deterministic",
+    "model": "test_deterministic",
+    "retrieval_latency_ms": 125.0,
+    "generation_latency_ms": 250.0,
+    "total_latency_ms": 500.0
+  },
+  {
+    "original_query": "Give me a comprehensive summary of this document.",
+    "normalized_query": "Give me a comprehensive summary of this document?",
+    "top_retrieval_evidence": "[chk_src_574c_bnd_00223_8711d995] (p.215)",
+    "evidence_sufficiency": true,
+    "answer": "This document is the official Tamil Nadu State Board Class 10 English textbook [chk_src_574c_bnd_00223_8711d995]. It encompasses prose, poetry, and supplementary reading designed to enhance language comprehension, literary analysis, and moral values. Core literary selections include 'His First Flight' by Liam O'Flaherty, 'The Grumble Family' by Lucy Maud Montgomery, and 'Zigzag' by Asha Nehemiah. The text focuses on themes of courage, self-discipline, and perseverance [chk_src_574c_bnd_00156_40e91ec3].",
+    "citations": [
+      "Class_10_English_2024_Edition-www.tntextbooks.in.pdf (Page 215) [chk_src_574c_bnd_00223_8711d995]",
+      "Class_10_English_2024_Edition-www.tntextbooks.in.pdf (Page 157) [chk_src_574c_bnd_00156_40e91ec3]"
+    ],
+    "provider": "test_deterministic",
+    "model": "test_deterministic",
+    "retrieval_latency_ms": 125.0,
+    "generation_latency_ms": 1000.0,
+    "total_latency_ms": 1250.0
+  },
+  {
+    "original_query": "what is the capital of france",
+    "normalized_query": "What is the capital of france?",
+    "top_retrieval_evidence": "None",
+    "evidence_sufficiency": false,
+    "answer": "I couldn't find information about the capital of france in this knowledge base. Try asking something related to your selected sources.",
+    "citations": [],
+    "provider": "evidence_gate",
+    "model": "sufficiency_evaluator",
+    "retrieval_latency_ms": 125.0,
+    "generation_latency_ms": 0.0,
+    "total_latency_ms": 218.0
+  },
+  {
+    "original_query": "why was the young seagull afraid to fly?",
+    "normalized_query": "Why was the young seagull afraid to fly?",
+    "top_retrieval_evidence": "[chk_src_574c_bnd_00002_de525a7a] (p.6)",
+    "evidence_sufficiency": true,
+    "answer": "The young seagull was afraid to fly because he felt certain that his wings would not support him [chk_src_574c_bnd_00002_de525a7a]. Looking down from the brink of the cliff ledge at the great expanse of sea miles beneath, he felt paralyzed by fear, despite his younger siblings already taking flight.",
+    "citations": [
+      "Class_10_English_2024_Edition-www.tntextbooks.in.pdf (Page 6) [chk_src_574c_bnd_00002_de525a7a]"
+    ],
+    "provider": "test_deterministic",
+    "model": "test_deterministic",
+    "retrieval_latency_ms": 125.0,
+    "generation_latency_ms": 750.0,
+    "total_latency_ms": 1000.0
+  },
+  {
+    "original_query": "what happened when the young seagull finally flew?",
+    "normalized_query": "What happened when the young seagull finally flew?",
+    "top_retrieval_evidence": "[chk_src_574c_bnd_00002_de525a7a] (p.6)",
+    "evidence_sufficiency": true,
+    "answer": "When the young seagull finally flew, his initial terror subsided as his wings spread outward into the wind [chk_src_574c_bnd_00002_de525a7a]. He soared gracefully over the green sea, floating on the water while his family screamed with joy, praising him and offering him scraps of dog-fish.",
+    "citations": [
+      "Class_10_English_2024_Edition-www.tntextbooks.in.pdf (Page 6) [chk_src_574c_bnd_00002_de525a7a]"
+    ],
+    "provider": "test_deterministic",
+    "model": "test_deterministic",
+    "retrieval_latency_ms": 125.0,
+    "generation_latency_ms": 688.0,
+    "total_latency_ms": 953.0
+  }
+]

@@ -1,0 +1,150 @@
+{
+  "rag_48a136e6c027": {
+    "rag_id": "rag_48a136e6c027",
+    "name": "Class_10_English_2024_Edition-www.tntextbooks.in",
+    "description": "Compiled via RAG Studio with HYBRID_RAG",
+    "status": "active",
+    "active_version_id": "ver_fb5b11ac",
+    "versions": [
+      {
+        "version_id": "ver_fb5b11ac",
+        "version_tag": "v1.0.0",
+        "build_id": "bld_8706465c",
+        "created_at": "2026-09-24T12:24:18.997127+00:00",
+        "chunk_count": 235,
+        "vector_count": 235,
+        "manifest_hash": "080756a8857d7da2199c4a11f0bc736e3ee44bc9663b3d23dbe5fc019f39fe1f",
+        "manifest_id": "man_bld_8706465c",
+        "embedding_model": "bge-small-en-v1.5",
+        "vector_store": "lancedb"
+      }
+    ],
+    "source_ids": [
+      "src_29a73a7148a0"
+    ],
+    "account_id": "acc_default",
+    "created_at": "2026-09-24T12:24:18.997127+00:00",
+    "updated_at": "2026-09-24T12:24:18.997127+00:00"
+  },
+  "rag_8cd633afd755": {
+    "rag_id": "rag_8cd633afd755",
+    "name": "11th General English EM Book 2019",
+    "description": "Compiled via RAG Studio with HYBRID_RAG",
+    "status": "active",
+    "active_version_id": "ver_16ec2588",
+    "versions": [
+      {
+        "version_id": "ver_16ec2588",
+        "version_tag": "v1.0.0",
+        "build_id": "bld_cc4a8fd3",
+        "created_at": "2026-09-24T15:51:06.981001+00:00",
+        "chunk_count": 237,
+        "vector_count": 237,
+        "manifest_hash": "f61017f4b68f3673f7ea3409f797a7d5fc53dd219934a8b8369e898e29d8942d",
+        "manifest_id": "man_bld_cc4a8fd3",
+        "embedding_model": "bge-small-en-v1.5",
+        "vector_store": "lancedb"
+      }
+    ],
+    "source_ids": [
+      "src_4812a3e226dc"
+    ],
+    "account_id": "acc_default",
+    "created_at": "2026-09-24T15:51:06.981001+00:00",
+    "updated_at": "2026-09-24T15:51:06.981001+00:00"
+  },
+  "rag_ef4542a2140d": {
+    "rag_id": "rag_ef4542a2140d",
+    "name": "BDA ROLE PLAY 4",
+    "description": "Compiled via RAG Studio with HYBRID_RAG",
+    "status": "active",
+    "active_version_id": "ver_aa00a0d7",
+    "versions": [
+      {
+        "version_id": "ver_aa00a0d7",
+        "version_tag": "v1.0.0",
+        "build_id": "bld_11877a97",
+        "created_at": "2026-09-26T16:37:31.116275+00:00",
+        "chunk_count": 3,
+        "vector_count": 3,
+        "manifest_hash": "b5d873ec5bd9f854260cae0db7b200905df9197397bdca1a5eca46d7686167f8",
+        "manifest_id": "man_bld_11877a97",
+        "embedding_model": "bge-small-en-v1.5",
+        "vector_store": "lancedb"
+      }
+    ],
+    "source_ids": [
+      "src_28f557f26983"
+    ],
+    "account_id": "acc_default",
+    "created_at": "2026-09-26T16:37:31.116275+00:00",
+    "updated_at": "2026-09-26T16:37:31.116275+00:00"
+  },
+  "rag_b9a2be9952cf": {
+    "rag_id": "rag_b9a2be9952cf",
+    "name": "11th General English EM Book 2019",
+    "description": "Compiled via RAG Studio with HYBRID_RAG",
+    "status": "active",
+    "active_version_id": "ver_d12661e1",
+    "versions": [
+      {
+        "version_id": "ver_20d4e7d2",
+        "version_tag": "v1.0.0",
+        "build_id": "bld_0b1084cf",
+        "created_at": "2026-09-27T06:33:04.386807+00:00",
+        "chunk_count": 237,
+        "vector_count": 237,
+        "manifest_hash": "80f3cedce0591216e3bf78989e1830b4dec5278688df402123ff9a0907b6ce7e",
+        "manifest_id": "man_bld_0b1084cf",
+        "embedding_model": "bge-small-en-v1.5",
+        "vector_store": "lancedb"
+      },
+      {
+        "version_id": "ver_d12661e1",
+        "version_tag": "v1.0.0",
+        "build_id": "bld_2a1cc7fb",
+        "created_at": "2026-09-27T07:50:27.080268+00:00",
+        "chunk_count": 3,
+        "vector_count": 3,
+        "manifest_hash": "b8822a113d99dff764ed4253fabad0334df29b3be4233f230bcbc5b7648d748c",
+        "manifest_id": "man_bld_2a1cc7fb",
+        "embedding_model": "bge-small-en-v1.5",
+        "vector_store": "lancedb"
+      }
+    ],
+    "source_ids": [
+      "src_40882a429655",
+      "src_c9389abd6f73"
+    ],
+    "account_id": "acc_791b6291c48f",
+    "created_at": "2026-09-27T06:33:04.386807+00:00",
+    "updated_at": "2026-09-27T07:50:27.080268+00:00"
+  },
+  "rag_bld_810e43db": {
+    "rag_id": "rag_bld_810e43db",
+    "name": "Knowledge Base (bld_810e43db)",
+    "description": "Migrated from compiled build bld_810e43db",
+    "status": "active",
+    "active_version_id": "ver_bld_810e43db",
+    "versions": [
+      {
+        "version_id": "ver_bld_810e43db",
+        "version_tag": "v1.0.0",
+        "build_id": "bld_810e43db",
+        "created_at": "2026-09-28T15:21:40.400645Z",
+        "chunk_count": 4,
+        "vector_count": 4,
+        "manifest_hash": "3b7f186ea27f135cb7cbf9554794991feba0ab2315226ce8181fe1e55198ee04",
+        "manifest_id": "man_bld_810e43db",
+        "embedding_model": "bge-small-en-v1.5",
+        "vector_store": "lancedb"
+      }
+    ],
+    "source_ids": [
+      "src_cf20978c84da"
+    ],
+    "account_id": "acc_default",
+    "created_at": "2026-09-28T15:21:39.490818Z",
+    "updated_at": "2026-09-28T15:21:40.400645Z"
+  }
+}

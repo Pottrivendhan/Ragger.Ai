@@ -1,0 +1,18 @@
+<Configuration>
+  <MappedFolders>
+    <MappedFolder>
+      <HostFolder>C:\Users\POTTRIVENDHAN\Ragger.ai\release</HostFolder>
+      <SandboxFolder>C:\RaggerDist</SandboxFolder>
+      <ReadOnly>true</ReadOnly>
+    </MappedFolder>
+    <MappedFolder>
+      <HostFolder>C:\Users\POTTRIVENDHAN\Ragger.ai\scripts</HostFolder>
+      <SandboxFolder>C:\RaggerScripts</SandboxFolder>
+      <ReadOnly>true</ReadOnly>
+    </MappedFolder>
+  </MappedFolders>
+  <LogonCommand>
+    <Command>C:\RaggerScripts\sandbox_runner.cmd</Command>
+  </LogonCommand>
+  <Networking>Enable</Networking>
+</Configuration>

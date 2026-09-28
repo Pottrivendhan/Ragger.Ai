@@ -1,0 +1,7 @@
+{
+  "provider": "local_flat_index",
+  "metric": "cosine",
+  "dimension": 384,
+  "chunk_count": 2,
+  "vector_count": 2
+}

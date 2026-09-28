@@ -1,0 +1,4 @@
+id,customer,amount,category,created_date
+1,Acme Corp,1540.25,Enterprise,2026-01-15
+2,Globex Inc,450.0,Mid-Market,2026-02-20
+3,Initech,89.99,Startup,2026-03-05

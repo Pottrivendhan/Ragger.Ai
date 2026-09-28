@@ -1,0 +1,78 @@
+# Dependencies & Virtual Environments
+node_modules/
+.pnp
+.pnp.js
+.venv/
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+
+# Python Cache & Build Artifacts
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.pytest_cache/
+.coverage
+htmlcov/
+.tox/
+.nox/
+build/
+dist/
+*.egg-info/
+.eggs/
+
+# Engine PyInstaller Builds & Temp
+engine/build/
+engine/dist/
+engine/*.spec
+
+# Electron & Frontend Build Outputs
+frontend/dist/
+frontend/build/
+release/
+*.blockmap
+
+# Large AI Models & Weights (Must NEVER be committed to git)
+storage/models/embedding/*.onnx
+storage/models/generation/*.gguf
+storage/models/generation/*.bin
+storage/models/**/*.bin
+storage/models/**/*.onnx
+storage/models/**/*.gguf
+storage/models/**/*.safetensors
+storage/models/**/*.pt
+storage/models/**/*.pth
+*.gguf
+*.onnx
+*.safetensors
+*.bin
+
+# Local User Test/Chat Sessions, Raw Uploads, Ephemeral Builds, & Agents State
+storage/incoming/*
+!storage/incoming/.gitkeep
+storage/builds/*
+!storage/builds/.gitkeep
+storage/sessions/*
+!storage/sessions/.gitkeep
+storage/chat_sessions/
+storage/agents/
+storage/*.json
+!storage/models/installed_direct.json
+.test_desktop_storage/
+
+# Logs & Runtime State
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# OS & Editor Specific Files
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+*.swp
+*.swo

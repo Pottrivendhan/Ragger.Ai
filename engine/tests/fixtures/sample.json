@@ -1,0 +1,23 @@
+[
+  {
+    "id": 1,
+    "name": "Athena",
+    "role": "Architect",
+    "level": "Principal",
+    "salary": 185000
+  },
+  {
+    "id": 2,
+    "name": "Boreas",
+    "role": "Engineer",
+    "level": "Senior",
+    "salary": 145000
+  },
+  {
+    "id": 3,
+    "name": "Clio",
+    "role": "Researcher",
+    "level": "Staff",
+    "salary": 165000
+  }
+]

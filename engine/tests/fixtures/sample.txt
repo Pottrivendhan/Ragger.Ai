@@ -1,0 +1,9 @@
+SYSTEM OPERATIONAL POLICY
+
+This policy governs data handling across all production repositories.
+Employees must follow data classification guidelines.
+
+SECURITY PROCEDURES
+
+All credentials must be stored in approved secret managers.
+Access tokens must be refreshed every 30 days.

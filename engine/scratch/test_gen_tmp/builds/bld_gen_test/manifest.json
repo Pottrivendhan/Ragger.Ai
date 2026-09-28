@@ -1,0 +1,45 @@
+{
+  "manifest_id": "man_bld_gen_test",
+  "workspace_id": "default",
+  "build_id": "bld_gen_test",
+  "config_id": "cfg_test001",
+  "config_version": 1,
+  "config_hash": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+  "source_ids": [
+    "src_doc_1"
+  ],
+  "source_hashes": {
+    "src_doc_1": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb"
+  },
+  "approved_architecture": "document_rag",
+  "chunking_config": {
+    "strategy": "boundary_paragraph",
+    "chunk_size": 512,
+    "chunk_overlap": 64
+  },
+  "embedding_config": {
+    "provider": "test_deterministic",
+    "model_name": "bge-small-en-v1.5",
+    "dimension": 384
+  },
+  "vector_db_config": {
+    "provider": "local_flat_index",
+    "metric": "cosine",
+    "index_type": "auto"
+  },
+  "retrieval_config": {
+    "strategy": "dense_vector_top_k",
+    "top_k": 5,
+    "rerank_enabled": false
+  },
+  "chunk_count": 2,
+  "vector_count": 2,
+  "embedding_dimension": 384,
+  "embedding_model": "bge-small-en-v1.5",
+  "vector_store": "local_flat_index",
+  "started_at": "2026-09-24T15:17:58.976481Z",
+  "completed_at": "2026-09-24T15:17:58.976481Z",
+  "build_duration_ms": 100.0,
+  "manifest_hash": "7e9a66268f6859d542fe1e453f6df8953d56b6468068e346031706f0e7aeb93d",
+  "status": "completed"
+}

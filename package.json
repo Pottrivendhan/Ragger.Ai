@@ -1,0 +1,34 @@
+{
+  "name": "ragger-ai",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Ragger.ai — Knowledge Engineering & RAG Creation Platform",
+  "workspaces": [
+    "apps/desktop",
+    "frontend"
+  ],
+  "scripts": {
+    "dev:frontend": "npm run dev --workspace=@ragger/frontend",
+    "dev:desktop": "npm run build --workspace=@ragger/desktop && npm run start --workspace=@ragger/desktop",
+    "dev": "node scripts/dev-launcher.mjs",
+    "build:frontend": "npm run build --workspace=@ragger/frontend",
+    "build:desktop": "npm run build --workspace=@ragger/desktop",
+    "build": "npm run build:frontend && npm run build:desktop",
+    "test:engine": ".\\engine\\.venv\\Scripts\\python.exe -m pytest .\\engine\\tests -v",
+    "test:integration": "npm run build:desktop && node scripts/test_integration.js",
+    "test:frozen": "node scripts/verify_frozen.js",
+    "test:pack": "node scripts/verify_pack.js",
+    "test:installer": "node scripts/verify_installer.js",
+    "test:clean": "node scripts/verify_clean_env.js",
+    "test": "npm run test:engine && npm run test:integration && npm run test:frozen && npm run test:pack && npm run test:installer && npm run test:clean",
+    "bundle:engine": ".\\engine\\.venv\\Scripts\\python.exe scripts/bundle_engine.py",
+    "pack:desktop": "npm run build && npm run bundle:engine && npm run pack --workspace=@ragger/desktop",
+    "dist": "npm run build && npm run bundle:engine && npm run dist --workspace=@ragger/desktop"
+  },
+  "devDependencies": {
+    "concurrently": "^9.0.1",
+    "cross-env": "^7.0.3",
+    "electron": "^44.4.3",
+    "wait-on": "^8.0.1"
+  }
+}

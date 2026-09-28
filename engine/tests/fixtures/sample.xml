@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<inventory>
+    <item>
+        <id>SKU-101</id>
+        <name>Sensor Node</name>
+        <qty>50</qty>
+        <price>89.50</price>
+    </item>
+    <item>
+        <id>SKU-102</id>
+        <name>Gateway Unit</name>
+        <qty>20</qty>
+        <price>299.00</price>
+    </item>
+</inventory>

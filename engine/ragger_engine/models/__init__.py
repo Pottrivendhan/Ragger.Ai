@@ -1,0 +1,85 @@
+"""
+Phase 9 Local AI Model Manager & Hardware Adaptation Subsystem.
+"""
+
+from .catalog import (
+    compute_catalog_compatibility,
+    get_catalog_entry,
+    get_curated_catalog,
+    validate_catalog,
+)
+from .exceptions import (
+    CatalogConfigurationError,
+    ChecksumMismatchError,
+    DownloadAlreadyRunningError,
+    InsufficientDiskSpaceError,
+    ModelInUseError,
+    ModelManagerError,
+    ModelNotFoundError,
+    ModelRoleMismatchError,
+    OllamaUnavailableError,
+)
+from .hardware import (
+    CACHE_TTL_SECONDS,
+    classify_gpu_tier,
+    classify_ram_tier,
+    compute_final_tier,
+    get_hardware_profile,
+    probe_hardware,
+)
+from .models import (
+    ActivateModelRequest,
+    ActivateModelResponse,
+    CatalogModelSpec,
+    CPUCapabilities,
+    DownloadProgress,
+    DownloadState,
+    GPUCapabilities,
+    HardwareProfile,
+    HardwareTier,
+    InstalledModelInfo,
+    InstalledStatus,
+    MemoryCapabilities,
+    ModelCategory,
+    ModelFormat,
+    OllamaStatusResponse,
+)
+from .service import ModelManagerService
+
+__all__ = [
+    "ModelCategory",
+    "ModelFormat",
+    "HardwareTier",
+    "DownloadState",
+    "InstalledStatus",
+    "CPUCapabilities",
+    "MemoryCapabilities",
+    "GPUCapabilities",
+    "HardwareProfile",
+    "CatalogModelSpec",
+    "InstalledModelInfo",
+    "DownloadProgress",
+    "ActivateModelRequest",
+    "ActivateModelResponse",
+    "OllamaStatusResponse",
+    "ModelManagerError",
+    "ModelNotFoundError",
+    "ModelInUseError",
+    "DownloadAlreadyRunningError",
+    "ModelRoleMismatchError",
+    "InsufficientDiskSpaceError",
+    "ChecksumMismatchError",
+    "OllamaUnavailableError",
+    "CatalogConfigurationError",
+    "classify_ram_tier",
+    "classify_gpu_tier",
+    "compute_final_tier",
+    "probe_hardware",
+    "get_hardware_profile",
+    "CACHE_TTL_SECONDS",
+    "get_curated_catalog",
+    "get_catalog_entry",
+    "compute_catalog_compatibility",
+    "validate_catalog",
+    "ModelManagerService",
+]

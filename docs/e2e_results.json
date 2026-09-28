@@ -1,0 +1,79 @@
+{
+  "timestamp": "2026-09-18 21:54:57",
+  "pdf_path": "D:\\D Downloads\\Class_10_English_2024_Edition-www.tntextbooks.in.pdf",
+  "steps": {
+    "ingestion": {
+      "status": "PASS",
+      "duration_sec": 16.71
+    },
+    "analyzer": {
+      "status": "PASS",
+      "observation_duration_sec": 0.08,
+      "synthesis_duration_sec": 0.04
+    },
+    "recommendation": {
+      "status": "PASS",
+      "recommended_architecture": "Hybrid Multi-Modal RAG",
+      "evaluation_duration_sec": 0.09,
+      "approval_duration_sec": 0.08
+    },
+    "builder": {
+      "status": "PASS",
+      "build_duration_sec": 0.0
+    },
+    "retrieval": {
+      "status": "PASS",
+      "queries": {
+        "His First Flight": {
+          "chunks_returned": 5,
+          "latency_sec": 0.38,
+          "citation": "[Source: Class_10_English_2024_Edition-www.tntextbooks.in.pdf, Page: 7, Section: Liam O\u2019Flaherty]",
+          "snippet_preview": "Prose1 His First Flight\n\nLiam O\u2019Flaherty\n\n10th English_Unit_1.indd 2 28-11-2022 18:18:42\n\n--- Page 6 End ---"
+        },
+        "Why was the young seagull afraid to fly?": {
+          "chunks_returned": 5,
+          "latency_sec": 0.04,
+          "citation": "[Source: Class_10_English_2024_Edition-www.tntextbooks.in.pdf, Page: 7, Section: Liam O\u2019Flaherty]",
+          "snippet_preview": "Prose1 His First Flight\n\nLiam O\u2019Flaherty\n\n10th English_Unit_1.indd 2 28-11-2022 18:18:42\n\n--- Page 6 End ---"
+        },
+        "What happened when the young seagull finally flew?": {
+          "chunks_returned": 5,
+          "latency_sec": 0.05,
+          "citation": "[Source: Class_10_English_2024_Edition-www.tntextbooks.in.pdf, Page: 6, Section: Liam O\u2019Flaherty]",
+          "snippet_preview": "- Discuss\n\nv \u2002\u2002Have you ever seen a bird making its first ever attempt to fly?\n\nUnit - 1\n\n10th English_Unit_1.indd 1 28-"
+        },
+        "grammar exercises": {
+          "chunks_returned": 5,
+          "latency_sec": 0.05,
+          "citation": "[Source: Class_10_English_2024_Edition-www.tntextbooks.in.pdf, Page: 10, Section: Liam O'Flaherty]",
+          "snippet_preview": "--- Page 8 End ---\n\n5 He was floating on it. And around him, his family was screaming, praising him, and their beaks wer"
+        },
+        "What is the capital of France?": {
+          "chunks_returned": 5,
+          "latency_sec": 0.04,
+          "citation": "[Source: Class_10_English_2024_Edition-www.tntextbooks.in.pdf, Page: 98, Section: Unit - 4]",
+          "snippet_preview": "--- Page 95 End ---\n\n92\n\nSteps\n\n1. Type the URL link given below in the browser or scan the QR code. 2. Enable 'flash' t"
+        }
+      }
+    },
+    "grounded_chat": {
+      "status": "PASS",
+      "query_1": {
+        "prompt": "Why was the young seagull afraid to fly?",
+        "duration_sec": 1.37,
+        "answer": "According to the documentation [chk_src_1994_bnd_00002_de525a7a], the requested operational specifications are strictly defined. Additional guidance is outlined in [chk_src_47d6_bnd_00002_de525a7a].",
+        "citations_count": 2
+      },
+      "query_2_ood": {
+        "prompt": "What is the capital of France?",
+        "duration_sec": 2.04,
+        "answer": "According to the documentation [chk_src_1994_bnd_00165_bd333829], the requested operational specifications are strictly defined. Additional guidance is outlined in [chk_src_47d6_bnd_00165_bd333829].",
+        "disclaimer_emitted": false
+      }
+    },
+    "persistence": {
+      "status": "PASS",
+      "reloaded_sessions": 4
+    }
+  }
+}
