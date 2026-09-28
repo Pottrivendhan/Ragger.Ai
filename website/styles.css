@@ -430,41 +430,159 @@ body {
   line-height: 1.6;
 }
 
-/* How It Works Steps Grid */
+/* How It Works Steps Grid with Ultra-Responsive Cursor Interactivity */
 .steps-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
   gap: 24px;
+  perspective: 1000px;
 }
 
 .step-card {
-  padding: 32px 28px;
+  padding: 36px 30px;
   display: flex;
   flex-direction: column;
   position: relative;
-  background: rgba(255, 255, 255, 0.92);
-  border-radius: var(--radius-lg);
+  background: rgba(255, 255, 255, 0.88);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border-radius: var(--radius-xl);
+  border: 1px solid rgba(226, 232, 240, 0.85);
+  box-shadow: 0 8px 24px -4px rgba(15, 23, 42, 0.05);
+  cursor: pointer;
+  overflow: hidden;
+  transition: all 0.35s cubic-bezier(0.2, 0.8, 0.2, 1);
+  transform-style: preserve-3d;
+}
+
+/* Ambient gradient sheen that tracks or reveals on hover */
+.step-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: var(--accent-blue-gradient);
+  opacity: 0;
+  transition: opacity 0.3s ease, height 0.3s ease;
+}
+
+.step-card::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: var(--radius-xl);
+  background: radial-gradient(400px circle at var(--mouse-x, 50%) var(--mouse-y, 50%), rgba(0, 82, 255, 0.12), transparent 40%);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+}
+
+.step-card:hover {
+  transform: translateY(-8px) scale(1.025);
+  background: #FFFFFF;
+  border-color: rgba(0, 82, 255, 0.35);
+  box-shadow: 
+    0 20px 35px -8px rgba(0, 82, 255, 0.18),
+    0 1px 3px 0 rgba(0, 82, 255, 0.1);
+}
+
+.step-card:hover::before {
+  opacity: 1;
+  height: 5px;
+}
+
+.step-card:hover::after {
+  opacity: 1;
+}
+
+.step-header-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
 }
 
 .step-number {
-  font-size: 32px;
+  font-size: 34px;
   font-weight: 900;
-  color: rgba(0, 82, 255, 0.2);
-  margin-bottom: 16px;
+  color: #94A3B8;
   line-height: 1;
+  letter-spacing: -1px;
+  transition: all 0.3s ease;
+}
+
+.step-card:hover .step-number {
+  color: var(--accent-blue);
+  transform: scale(1.1) translateX(2px);
+  text-shadow: 0 0 16px rgba(0, 82, 255, 0.3);
+}
+
+.step-icon-badge {
+  width: 40px;
+  height: 40px;
+  border-radius: 12px;
+  background: #F1F5F9;
+  color: #64748B;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s cubic-bezier(0.2, 0.8, 0.2, 1);
+  border: 1px solid #E2E8F0;
+}
+
+.step-card:hover .step-icon-badge {
+  background: #EFF6FF;
+  color: var(--accent-blue);
+  border-color: #BFDBFE;
+  transform: rotate(6deg) scale(1.08);
+  box-shadow: 0 4px 12px rgba(0, 82, 255, 0.15);
 }
 
 .step-title {
-  font-size: 18px;
-  font-weight: 700;
+  font-size: 19px;
+  font-weight: 800;
   color: #0F172A;
-  margin-bottom: 10px;
+  margin-bottom: 12px;
+  transition: color 0.25s ease;
+  letter-spacing: -0.3px;
+}
+
+.step-card:hover .step-title {
+  color: var(--accent-blue);
 }
 
 .step-text {
   font-size: 14px;
   color: #64748B;
-  line-height: 1.6;
+  line-height: 1.65;
+  transition: color 0.25s ease;
+}
+
+.step-card:hover .step-text {
+  color: #334155;
+}
+
+/* Micro-interaction interactive tag on card hover */
+.step-footer-tag {
+  margin-top: 18px;
+  padding-top: 14px;
+  border-top: 1px solid #F1F5F9;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 12px;
+  font-weight: 700;
+  color: #94A3B8;
+  opacity: 0.6;
+  transition: all 0.3s ease;
+}
+
+.step-card:hover .step-footer-tag {
+  opacity: 1;
+  color: var(--accent-blue);
+  gap: 10px;
 }
 
 /* Architecture Showcase */
