@@ -1,32 +1,35 @@
 /* ==========================================================================
    Ragger.ai Product Website Styles (LogiVault AI Product Suite)
-   Premium Blue & Snapdragon Theme (Replicating Image 1 blue aesthetic)
-   Clean white/subtle blue-slate background, ambient sapphire/cyan glows,
-   floating glass cards, micro-interactions, responsive layout.
+   Electric Azure / Cobalt Blue & Glassmorphic Modern Aesthetic.
+   White / clean light slate background, smooth ambient glows, floating glass cards,
+   micro-interactions, responsive layout.
    ========================================================================== */
 
 :root {
   --font-sans: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
   --font-mono: 'JetBrains Mono', ui-monospace, monospace;
 
-  /* Colors */
+  /* Backgrounds */
   --bg-primary: #F8FAFC;
-  --bg-subtle: #F0F4F9;
+  --bg-subtle: #F1F5F9;
   --surface-white: #FFFFFF;
-  --surface-glass: rgba(255, 255, 255, 0.85);
-  --surface-glass-card: rgba(255, 255, 255, 0.88);
-  --surface-glass-floating: rgba(255, 255, 255, 0.96);
+  --surface-glass: rgba(255, 255, 255, 0.86);
+  --surface-glass-card: rgba(255, 255, 255, 0.8);
+  --surface-glass-floating: rgba(255, 255, 255, 0.95);
 
-  /* Primary Blue Palette (Inspired by Image 1 Ragger.ai blue theme) */
-  --accent-blue-primary: #2563EB;      /* Vibrant sapphire blue */
-  --accent-blue-hover: #1D4ED8;        /* Deep rich blue */
-  --accent-blue-light: #3B82F6;        /* Bright azure */
-  --accent-blue-subtle: rgba(37, 99, 235, 0.08);
-  --accent-blue-glow: rgba(37, 99, 235, 0.35);
-  --accent-cyan: #06B6D4;              /* Cyan highlight from R logo */
-  --accent-purple: #6366F1;            /* Indigo/purple accent */
-  --accent-emerald: #10B981;
-  --accent-emerald-subtle: rgba(16, 185, 129, 0.08);
+  /* Primary Electric Blue Palette (Inspired by Reference Image 1 Theme) */
+  --accent-blue: #0052FF;              /* Vibrant Electric Blue */
+  --accent-blue-hover: #0043D6;
+  --accent-blue-light: #2563EB;
+  --accent-blue-subtle: rgba(0, 82, 255, 0.08);
+  --accent-blue-gradient: linear-gradient(135deg, #0052FF 0%, #0091FF 100%);
+  --accent-blue-card-glow: 0 10px 25px -4px rgba(0, 82, 255, 0.35);
+
+  /* Secondary Accents */
+  --accent-cyan: #06B6D4;
+  --accent-indigo: #4F46E5;
+  --accent-emerald: #059669;
+  --accent-emerald-subtle: rgba(5, 150, 105, 0.08);
 
   /* Text */
   --text-primary: #0F172A;
@@ -36,16 +39,16 @@
 
   /* Borders */
   --border-subtle: rgba(15, 23, 42, 0.06);
-  --border-medium: rgba(37, 99, 235, 0.15);
-  --border-glass: rgba(255, 255, 255, 0.9);
-  --border-blue: rgba(37, 99, 235, 0.25);
+  --border-medium: rgba(15, 23, 42, 0.1);
+  --border-glass: rgba(255, 255, 255, 0.85);
+  --border-blue: rgba(0, 82, 255, 0.3);
 
   /* Shadows */
   --shadow-subtle: 0 2px 8px -2px rgba(15, 23, 42, 0.04);
   --shadow-card: 0 10px 30px -4px rgba(15, 23, 42, 0.06);
   --shadow-elevated: 0 20px 40px -10px rgba(15, 23, 42, 0.1);
-  --shadow-glass: 0 8px 32px 0 rgba(37, 99, 235, 0.08);
-  --shadow-blue-glow: 0 10px 25px -4px rgba(37, 99, 235, 0.4);
+  --shadow-glass: 0 8px 32px 0 rgba(0, 82, 255, 0.06);
+  --shadow-blue-glow: 0 10px 25px -4px rgba(0, 82, 255, 0.35);
 
   /* Radii */
   --radius-sm: 8px;
@@ -75,14 +78,12 @@ body {
   display: flex;
   flex-direction: column;
   background-color: var(--bg-primary);
-  /* Blue ambient lighting matching Image 1 background */
   background-image: 
-    radial-gradient(circle at 15% 15%, rgba(37, 99, 235, 0.07) 0%, transparent 45%),
-    radial-gradient(circle at 85% 25%, rgba(6, 182, 212, 0.08) 0%, transparent 40%),
-    radial-gradient(circle at 50% 85%, rgba(99, 102, 241, 0.06) 0%, transparent 50%),
+    radial-gradient(circle at 12% 18%, rgba(0, 82, 255, 0.05) 0%, transparent 45%),
+    radial-gradient(circle at 88% 75%, rgba(0, 145, 255, 0.05) 0%, transparent 45%),
     radial-gradient(#CBD5E1 1px, transparent 1px);
-  background-size: 100% 100%, 100% 100%, 100% 100%, 30px 30px;
-  background-position: 0 0, 0 0, 0 0, 0 0;
+  background-size: 100% 100%, 100% 100%, 30px 30px;
+  background-position: 0 0, 0 0, 0 0;
   overflow-x: hidden;
   -webkit-font-smoothing: antialiased;
 }
@@ -92,15 +93,15 @@ body {
   background: var(--surface-glass);
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
-  border: 1px solid rgba(255, 255, 255, 0.95);
+  border: 1px solid rgba(255, 255, 255, 0.9);
   box-shadow: var(--shadow-glass);
 }
 
 .glass-card {
   background: var(--surface-glass-card);
-  backdrop-filter: blur(14px);
-  -webkit-backdrop-filter: blur(14px);
-  border: 1px solid rgba(255, 255, 255, 0.9);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.85);
   box-shadow: var(--shadow-card);
   border-radius: var(--radius-lg);
   transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
@@ -109,13 +110,13 @@ body {
 .glass-card:hover {
   transform: translateY(-4px);
   box-shadow: var(--shadow-elevated);
-  border-color: rgba(37, 99, 235, 0.3);
+  border-color: rgba(0, 82, 255, 0.25);
 }
 
-/* Floating Navigation Header (Blue themed) */
+/* Floating Navigation Header */
 .nav-container-wrapper {
   position: sticky;
-  top: 18px;
+  top: 20px;
   z-index: 100;
   padding: 0 24px;
   max-width: 1240px;
@@ -132,8 +133,8 @@ body {
   background: rgba(255, 255, 255, 0.9);
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
-  border: 1px solid rgba(219, 234, 254, 0.9);
-  box-shadow: 0 10px 35px -5px rgba(37, 99, 235, 0.08);
+  border: 1px solid rgba(226, 232, 240, 0.85);
+  box-shadow: 0 10px 35px -5px rgba(15, 23, 42, 0.06);
 }
 
 .nav-brand {
@@ -154,7 +155,7 @@ body {
 }
 
 .nav-brand-title span {
-  color: var(--accent-blue-primary);
+  color: var(--accent-blue);
 }
 
 .nav-links {
@@ -175,7 +176,7 @@ body {
 
 .nav-links a:hover,
 .nav-links a.active {
-  color: var(--accent-blue-primary);
+  color: var(--accent-blue);
 }
 
 .nav-links a.active::after {
@@ -184,8 +185,8 @@ body {
   bottom: -6px;
   left: 0;
   width: 100%;
-  height: 2px;
-  background: var(--accent-blue-primary);
+  height: 2.5px;
+  background: var(--accent-blue);
   border-radius: 2px;
 }
 
@@ -195,26 +196,27 @@ body {
   gap: 16px;
 }
 
+/* Status Pill in Nav */
 .nav-status-pill {
   display: inline-flex;
   align-items: center;
   gap: 6px;
   padding: 6px 14px;
-  background: #EFF6FF;
+  background: #F1F5F9;
   border-radius: var(--radius-pill);
   font-size: 11px;
   font-weight: 700;
-  color: #1E40AF;
+  color: #475569;
   letter-spacing: 0.5px;
-  border: 1px solid #DBEAFE;
+  border: 1px solid #E2E8F0;
 }
 
 .status-dot {
   width: 7px;
   height: 7px;
   border-radius: 50%;
-  background-color: #2563EB;
-  box-shadow: 0 0 8px #2563EB;
+  background-color: #0052FF;
+  box-shadow: 0 0 8px #0052FF;
   animation: pulse-dot 2s infinite ease-in-out;
 }
 
@@ -223,13 +225,13 @@ body {
   50% { opacity: 0.5; transform: scale(1.2); }
 }
 
-/* Action Buttons in Vibrant Blue */
+/* Primary Blue Action Button */
 .btn-primary-blue {
   display: inline-flex;
   align-items: center;
   justify-content: center;
   gap: 8px;
-  background: linear-gradient(135deg, #2563EB, #1D4ED8);
+  background: var(--accent-blue-gradient);
   color: #FFFFFF;
   padding: 10px 24px;
   border-radius: var(--radius-pill);
@@ -243,9 +245,9 @@ body {
 }
 
 .btn-primary-blue:hover {
-  background: linear-gradient(135deg, #1D4ED8, #1E40AF);
+  background: linear-gradient(135deg, #0043D6 0%, #007CE0 100%);
   transform: translateY(-2px);
-  box-shadow: 0 14px 28px -4px rgba(37, 99, 235, 0.45);
+  box-shadow: 0 14px 28px -4px rgba(0, 82, 255, 0.45);
 }
 
 .btn-primary-blue:active {
@@ -258,30 +260,30 @@ body {
   justify-content: center;
   gap: 8px;
   background: #FFFFFF;
-  color: #1E293B;
+  color: #334155;
   padding: 10px 22px;
   border-radius: var(--radius-pill);
   font-size: 14px;
   font-weight: 600;
   text-decoration: none;
-  border: 1px solid #DBEAFE;
+  border: 1px solid #E2E8F0;
   cursor: pointer;
   transition: all 0.2s ease;
   box-shadow: var(--shadow-subtle);
 }
 
 .btn-secondary:hover {
-  background: #EFF6FF;
-  color: var(--accent-blue-primary);
+  background: #F8FAFC;
+  color: var(--accent-blue);
   border-color: #BFDBFE;
   transform: translateY(-1px);
 }
 
-/* Hero Section (Replicating Image 1 Blue Theme) */
+/* Hero Section */
 .hero-section {
-  padding: 64px 24px 60px;
+  padding: 70px 24px 60px;
   text-align: center;
-  max-width: 1050px;
+  max-width: 980px;
   margin: 0 auto;
   position: relative;
 }
@@ -291,7 +293,7 @@ body {
   align-items: center;
   justify-content: center;
   gap: 12px;
-  margin-bottom: 28px;
+  margin-bottom: 32px;
   flex-wrap: wrap;
 }
 
@@ -301,7 +303,7 @@ body {
   gap: 6px;
   padding: 6px 14px;
   border-radius: var(--radius-pill);
-  font-size: 11.5px;
+  font-size: 11px;
   font-weight: 700;
   letter-spacing: 0.5px;
   text-transform: uppercase;
@@ -309,43 +311,45 @@ body {
 
 .hero-pill-blue {
   background: #EFF6FF;
-  color: #1D4ED8;
-  border: 1px solid #BFDBFE;
+  color: #0052FF;
+  border: 1px solid #DBEAFE;
+}
+
+.hero-pill-indigo {
+  background: #EEF2FF;
+  color: #4F46E5;
+  border: 1px solid #E0E7FF;
 }
 
 .hero-pill-cyan {
   background: #ECFEFF;
-  color: #0E7490;
+  color: #0891B2;
   border: 1px solid #CFFAFE;
 }
 
-.hero-pill-snapdragon {
-  background: linear-gradient(135deg, rgba(239, 246, 255, 0.9), rgba(224, 231, 255, 0.9));
-  color: #1E3A8A;
-  border: 1px solid #93C5FD;
-}
-
 .hero-title {
-  font-size: 56px;
-  line-height: 1.12;
+  font-size: 58px;
+  line-height: 1.1;
   font-weight: 900;
   color: #0F172A;
   letter-spacing: -1.5px;
-  margin-bottom: 18px;
+  margin-bottom: 20px;
 }
 
 .hero-title .highlight-blue {
-  background: linear-gradient(135deg, #2563EB 0%, #06B6D4 100%);
+  color: var(--accent-blue);
+  background: linear-gradient(135deg, #0052FF 0%, #0091FF 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  display: inline-block;
+  display: block;
+  margin-top: 4px;
 }
 
 .hero-subtitle {
-  font-size: 18.5px;
+  font-size: 18px;
   line-height: 1.6;
-  color: #475569;
-  max-width: 720px;
+  color: #64748B;
+  max-width: 680px;
   margin: 0 auto 36px;
   font-weight: 450;
 }
@@ -360,64 +364,10 @@ body {
 }
 
 .hero-subtext {
-  font-size: 12.5px;
-  color: #64748B;
+  font-size: 12px;
+  color: #94A3B8;
   font-weight: 500;
   letter-spacing: 0.3px;
-}
-
-/* Image 1 Workflow Pipeline Cards (Upload -> Analyze -> Recommend -> Approve -> Build -> Chat) */
-.pipeline-bar-wrapper {
-  margin: 48px auto 0;
-  max-width: 1020px;
-  background: #FFFFFF;
-  border-radius: var(--radius-xl);
-  padding: 20px 24px;
-  border: 1px solid rgba(219, 234, 254, 0.9);
-  box-shadow: 0 12px 35px -5px rgba(37, 99, 235, 0.08);
-}
-
-.pipeline-steps-flex {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 8px;
-  flex-wrap: wrap;
-}
-
-.pipeline-step-item {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-  padding: 10px 14px;
-  background: #F8FAFC;
-  border-radius: 12px;
-  border: 1px solid #E2E8F0;
-  min-width: 125px;
-  transition: all 0.2s ease;
-}
-
-.pipeline-step-item:hover {
-  background: #EFF6FF;
-  border-color: #BFDBFE;
-  transform: translateY(-2px);
-}
-
-.pipeline-step-icon {
-  width: 32px;
-  height: 32px;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-bottom: 6px;
-}
-
-.pipeline-arrow {
-  color: #94A3B8;
-  font-size: 14px;
-  font-weight: 700;
 }
 
 /* Feature Showcase Preview in Hero */
@@ -425,21 +375,21 @@ body {
   margin-top: 48px;
   position: relative;
   border-radius: var(--radius-xl);
-  padding: 10px;
-  background: linear-gradient(135deg, rgba(37, 99, 235, 0.25), rgba(6, 182, 212, 0.2), rgba(255, 255, 255, 0.9));
-  box-shadow: 0 25px 60px -15px rgba(37, 99, 235, 0.15);
+  padding: 8px;
+  background: linear-gradient(135deg, rgba(0, 82, 255, 0.2), rgba(0, 145, 255, 0.15), rgba(255, 255, 255, 0.9));
+  box-shadow: 0 25px 60px -15px rgba(0, 82, 255, 0.15);
 }
 
 .hero-mockup-inner {
   border-radius: var(--radius-lg);
   overflow: hidden;
   background: #FFFFFF;
-  border: 1px solid rgba(219, 234, 254, 0.9);
+  border: 1px solid rgba(226, 232, 240, 0.9);
 }
 
 /* Sections Common Styling */
 .section-wrapper {
-  padding: 80px 24px;
+  padding: 90px 24px;
   max-width: 1200px;
   margin: 0 auto;
   width: 100%;
@@ -447,7 +397,7 @@ body {
 
 .section-header {
   text-align: center;
-  margin-bottom: 52px;
+  margin-bottom: 56px;
 }
 
 .section-badge {
@@ -456,7 +406,7 @@ body {
   font-weight: 800;
   letter-spacing: 1px;
   text-transform: uppercase;
-  color: var(--accent-blue-primary);
+  color: var(--accent-blue);
   background: #EFF6FF;
   padding: 6px 14px;
   border-radius: var(--radius-pill);
@@ -475,7 +425,7 @@ body {
 .section-desc {
   font-size: 16px;
   color: #64748B;
-  max-width: 620px;
+  max-width: 600px;
   margin: 0 auto;
   line-height: 1.6;
 }
@@ -494,13 +444,12 @@ body {
   position: relative;
   background: rgba(255, 255, 255, 0.92);
   border-radius: var(--radius-lg);
-  border: 1px solid #E2E8F0;
 }
 
 .step-number {
   font-size: 32px;
   font-weight: 900;
-  color: rgba(37, 99, 235, 0.2);
+  color: rgba(0, 82, 255, 0.2);
   margin-bottom: 16px;
   line-height: 1;
 }
@@ -522,7 +471,7 @@ body {
 .architecture-card {
   background: #FFFFFF;
   border-radius: var(--radius-xl);
-  border: 1px solid #DBEAFE;
+  border: 1px solid #E2E8F0;
   box-shadow: var(--shadow-card);
   padding: 40px;
   overflow: hidden;
@@ -553,7 +502,7 @@ body {
   height: 44px;
   border-radius: 12px;
   background: #EFF6FF;
-  color: var(--accent-blue-primary);
+  color: var(--accent-blue);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -576,7 +525,7 @@ body {
 
 /* FAQ Accordion */
 .faq-grid {
-  max-width: 820px;
+  max-width: 800px;
   margin: 0 auto;
   display: flex;
   flex-direction: column;
@@ -614,7 +563,7 @@ body {
 
 .faq-item.open .faq-chevron {
   transform: rotate(180deg);
-  color: var(--accent-blue-primary);
+  color: var(--accent-blue);
 }
 
 .faq-answer {
@@ -630,23 +579,25 @@ body {
 }
 
 /* ==========================================================================
-   CONTACT PAGE LAYOUT & INCREASED WIDTH (Reference Image 2 & 3)
-   Expanded width: 1340px total container with wide, comfortable form card.
+   CONTACT PAGE LAYOUT & INCREASED WIDTH FOR "Send a Message"
+   User constraint: "increase the size of the width 'Send a Message' refere img 2
+   one thing we use referencr of ing one does not use any content of img 1 that
+   main thing and w eincrease the width of 'Send a Message' not increase the hight
+   only increase the width remain unchange"
    ========================================================================== */
 .contact-container {
-  max-width: 1340px;          /* Substantially increased width per request */
-  margin: 40px auto 90px;
-  padding: 0 32px;
+  max-width: 1320px;                       /* Increased overall width to accommodate wider Send a Message card */
+  margin: 40px auto 80px;
+  padding: 0 24px;
   display: grid;
-  grid-template-columns: 380px 1fr;  /* Generous 1fr allocates full wide space to Send a Message */
-  gap: 42px;
+  grid-template-columns: 340px 1fr;       /* Left column compact, right column takes expanded width */
+  gap: 36px;
   align-items: flex-start;
 }
 
 @media (max-width: 960px) {
   .contact-container {
     grid-template-columns: 1fr;
-    gap: 32px;
   }
 }
 
@@ -659,13 +610,13 @@ body {
 .contact-card {
   background: #FFFFFF;
   border-radius: var(--radius-xl);
-  border: 1px solid rgba(219, 234, 254, 0.9);
-  padding: 34px 30px;
-  box-shadow: 0 10px 30px -4px rgba(37, 99, 235, 0.06);
+  border: 1px solid rgba(226, 232, 240, 0.9);
+  padding: 32px 28px;
+  box-shadow: var(--shadow-card);
 }
 
 .contact-card-title {
-  font-size: 20px;
+  font-size: 18px;
   font-weight: 800;
   color: #0F172A;
   margin-bottom: 24px;
@@ -679,22 +630,20 @@ body {
 }
 
 .channel-icon {
-  width: 44px;
-  height: 44px;
+  width: 42px;
+  height: 42px;
   border-radius: 12px;
   background: #EFF6FF;
-  color: var(--accent-blue-primary);
+  color: #0052FF;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-shrink: 0;
-  border: 1px solid #DBEAFE;
 }
 
 .channel-icon.phone {
   background: #ECFDF5;
   color: #059669;
-  border-color: #D1FAE5;
 }
 
 .channel-info label {
@@ -709,14 +658,14 @@ body {
 
 .channel-info a,
 .channel-info span {
-  font-size: 14.5px;
+  font-size: 14px;
   font-weight: 600;
   color: #0F172A;
   text-decoration: none;
 }
 
 .channel-info a:hover {
-  color: var(--accent-blue-primary);
+  color: var(--accent-blue);
 }
 
 /* Mail directly button */
@@ -726,9 +675,9 @@ body {
   align-items: center;
   justify-content: center;
   gap: 8px;
-  background: linear-gradient(135deg, #2563EB, #1D4ED8);
+  background: #0052FF;
   color: #FFFFFF;
-  padding: 13px 20px;
+  padding: 12px 20px;
   border-radius: var(--radius-md);
   font-size: 14px;
   font-weight: 700;
@@ -736,11 +685,11 @@ body {
   border: none;
   cursor: pointer;
   transition: all 0.2s ease;
-  box-shadow: 0 4px 14px rgba(37, 99, 235, 0.3);
+  box-shadow: 0 4px 14px rgba(0, 82, 255, 0.3);
 }
 
 .btn-mail-directly:hover {
-  background: linear-gradient(135deg, #1D4ED8, #1E40AF);
+  background: #0043D6;
   transform: translateY(-1px);
 }
 
@@ -749,11 +698,11 @@ body {
   background: #F8FAFC;
   border-radius: var(--radius-xl);
   border: 1px solid #E2E8F0;
-  padding: 30px 26px;
+  padding: 28px 24px;
 }
 
 .enterprise-badge {
-  font-size: 11px;
+  font-size: 10.5px;
   font-weight: 800;
   letter-spacing: 0.6px;
   text-transform: uppercase;
@@ -762,54 +711,65 @@ body {
 }
 
 .enterprise-title {
-  font-size: 16.5px;
+  font-size: 16px;
   font-weight: 800;
   color: #0F172A;
   margin-bottom: 10px;
 }
 
 .enterprise-desc {
-  font-size: 13.5px;
+  font-size: 13px;
   line-height: 1.6;
   color: #64748B;
 }
 
 /* ==========================================================================
-   EXPANDED "SEND A MESSAGE" CARD (Exact match to requested Image 2)
-   Increased padding, generous width, sleek input fields and purple-blue button.
+   "SEND A MESSAGE" FORM CARD (WIDTH INCREASED WHILE HEIGHT REMAINS COMPACT)
    ========================================================================== */
 .form-card {
   background: #FFFFFF;
-  border-radius: 28px;
+  border-radius: var(--radius-xl);
   border: 1px solid rgba(226, 232, 240, 0.9);
-  padding: 48px 44px;      /* Generous breathing room */
-  box-shadow: 0 16px 45px -8px rgba(15, 23, 42, 0.08);
-  width: 100%;             /* Fills the expanded container */
+  padding: 36px 40px;
+  box-shadow: var(--shadow-card);
+  width: 100%;                          /* Takes full width of the expanded right column */
+}
+
+.form-grid-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;      /* Split name & email horizontally to utilize wider card width without adding height */
+  gap: 20px;
+}
+
+@media (max-width: 680px) {
+  .form-grid-row {
+    grid-template-columns: 1fr;
+  }
 }
 
 .form-group {
-  margin-bottom: 24px;
+  margin-bottom: 18px;
 }
 
 .form-group label {
   display: block;
   font-size: 11.5px;
-  font-weight: 800;
+  font-weight: 700;
   color: #475569;
-  letter-spacing: 0.6px;
+  letter-spacing: 0.5px;
   text-transform: uppercase;
-  margin-bottom: 10px;
+  margin-bottom: 8px;
 }
 
 .form-input,
 .form-textarea {
   width: 100%;
-  padding: 15px 20px;
-  border-radius: 14px;
-  border: 1.5px solid #E2E8F0;
-  background: #FFFFFF;
+  padding: 12px 16px;
+  border-radius: var(--radius-md);
+  border: 1px solid #E2E8F0;
+  background: #F8FAFC;
   font-family: inherit;
-  font-size: 14.5px;
+  font-size: 14px;
   color: #0F172A;
   transition: all 0.2s ease;
   outline: none;
@@ -818,44 +778,44 @@ body {
 .form-input:focus,
 .form-textarea:focus {
   background: #FFFFFF;
-  border-color: #4338CA;
-  box-shadow: 0 0 0 4px rgba(67, 56, 202, 0.1);
+  border-color: var(--accent-blue);
+  box-shadow: 0 0 0 3px rgba(0, 82, 255, 0.12);
 }
 
 .form-textarea {
   resize: vertical;
-  min-height: 140px;
-  line-height: 1.6;
+  min-height: 110px;
 }
 
-/* Send Inquiry Button (Vibrant Indigo-Purple from Image 2/3) */
 .btn-send-inquiry {
-  width: 100%;
-  display: flex;
+  display: inline-flex;
   align-items: center;
   justify-content: center;
-  gap: 10px;
-  background: linear-gradient(135deg, #4F46E5, #4338CA);
+  gap: 8px;
+  background: #0052FF;
   color: #FFFFFF;
-  padding: 16px 28px;
-  border-radius: 14px;
-  font-size: 14.5px;
+  padding: 13px 32px;
+  border-radius: var(--radius-md);
+  font-size: 14px;
   font-weight: 700;
   text-decoration: none;
   border: none;
   cursor: pointer;
-  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
-  box-shadow: 0 8px 24px -2px rgba(79, 70, 229, 0.4);
+  transition: all 0.2s ease;
+  box-shadow: 0 6px 18px rgba(0, 82, 255, 0.35);
 }
 
 .btn-send-inquiry:hover {
-  background: linear-gradient(135deg, #4338CA, #3730A3);
+  background: #0043D6;
   transform: translateY(-2px);
-  box-shadow: 0 12px 28px -2px rgba(79, 70, 229, 0.5);
 }
 
 /* ==========================================================================
    FOOTER (EXACT REPLICATION of reference Image 2)
+   3 Columns:
+   1. Brand logo + title, Local-first LAN description, green badge.
+   2. PAGES column: Overview, How It Works, Features, Architecture, FAQ, Download
+   3. SUPPORT & INQUIRIES column: LogiVault AI, subtitle, email, phone, Instagram, GitHub
    ========================================================================== */
 .site-footer {
   background: #FFFFFF;
@@ -865,7 +825,7 @@ body {
 }
 
 .footer-inner {
-  max-width: 1180px;
+  max-width: 1140px;
   margin: 0 auto;
   display: grid;
   grid-template-columns: 1.4fr 1fr 1.6fr;
@@ -894,7 +854,7 @@ body {
 }
 
 .footer-col-brand .footer-brand-title span {
-  color: var(--accent-blue-primary);
+  color: var(--accent-blue);
 }
 
 .footer-col-brand .footer-brand-desc {
@@ -945,7 +905,7 @@ body {
 }
 
 .footer-nav-list a:hover {
-  color: var(--accent-blue-primary);
+  color: var(--accent-blue);
 }
 
 .footer-support-header {
@@ -987,11 +947,11 @@ body {
 }
 
 .footer-contact-item a:hover {
-  color: var(--accent-blue-primary);
+  color: var(--accent-blue);
 }
 
 .footer-bottom-line {
-  max-width: 1180px;
+  max-width: 1140px;
   margin: 40px auto 0;
   padding-top: 24px;
   border-top: 1px solid #F1F5F9;
