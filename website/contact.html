@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact & Inquiries — Ragger.ai | LogiVault AI</title>
+  <meta name="description" content="Get in touch with LogiVault AI regarding Ragger.ai enterprise deployments, offline AI integrations, or technical support.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <!-- Lucide Icons CDN -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body>
+
+  <!-- =========================================================================
+       FLOATING GLASS NAVBAR
+       ========================================================================= -->
+  <div class="nav-container-wrapper">
+    <header class="floating-navbar">
+      <a href="index.html" class="nav-brand">
+        <img src="assets/ragger.ai_box_logo.png" alt="Ragger.ai" style="width: 32px; height: 32px; border-radius: 8px; object-fit: contain;">
+        <span class="nav-brand-title">Ragger<span>.ai</span></span>
+      </a>
+
+      <nav>
+        <ul class="nav-links">
+          <li><a href="index.html#overview">Overview</a></li>
+          <li><a href="index.html#how-it-works">How It Works</a></li>
+          <li><a href="index.html#features">Features</a></li>
+          <li><a href="index.html#architecture">Architecture</a></li>
+          <li><a href="index.html#faq">FAQ</a></li>
+          <li><a href="contact.html" class="active">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div class="nav-actions">
+        <div class="nav-status-pill">
+          <span class="status-dot"></span>
+          <span>LOCAL-FIRST ENGINE</span>
+        </div>
+
+        <button class="btn-primary-orange" onclick="triggerSetupDownload()">
+          <i data-lucide="download" style="width: 16px; height: 16px;"></i>
+          <span>Download</span>
+        </button>
+      </div>
+    </header>
+  </div>
+
+  <!-- Header Section for Contact Page -->
+  <div style="text-align: center; padding: 48px 24px 10px; max-width: 720px; margin: 0 auto;">
+    <span class="section-badge">Get in Touch</span>
+    <h1 style="font-size: 42px; font-weight: 900; color: #0F172A; letter-spacing: -1px; margin-bottom: 12px;">
+      Contact LogiVault AI
+    </h1>
+    <p style="font-size: 16px; color: #64748B; line-height: 1.6;">
+      Have questions regarding Ragger.ai offline architectures, hardware requirements, or enterprise local integrations? Send us an inquiry below.
+    </p>
+  </div>
+
+  <!-- =========================================================================
+       CONTACT LAYOUT (Exact Replication of Reference Image 3)
+       Left Column:
+         1. Direct Channels (Primary Email, Direct Phone fetched from footer: +91 9159243145, Mail Us Directly button)
+         2. Enterprise & Embedded Subcard (Custom Offline AI Integrations)
+       Right Column:
+         Send a Message form (YOUR NAME, EMAIL ADDRESS, SUBJECT, MESSAGE, SEND INQUIRY VIA EMAIL button)
+       ========================================================================= -->
+  <main class="contact-container">
+    <!-- Left Column -->
+    <div class="contact-left-col">
+      <!-- Direct Channels Card (Image 3) -->
+      <div class="contact-card">
+        <h2 class="contact-card-title">Direct Channels</h2>
+
+        <div class="channel-item">
+          <div class="channel-icon">
+            <i data-lucide="mail" style="width: 20px; height: 20px;"></i>
+          </div>
+          <div class="channel-info">
+            <label>PRIMARY EMAIL</label>
+            <a href="mailto:info.logivaultai@gmail.com">info.logivaultai@gmail.com</a>
+          </div>
+        </div>
+
+        <div class="channel-item">
+          <div class="channel-icon phone">
+            <i data-lucide="phone" style="width: 20px; height: 20px;"></i>
+          </div>
+          <div class="channel-info">
+            <label>DIRECT PHONE</label>
+            <!-- Fetched from footer reference image: +91 9159243145 -->
+            <a href="tel:+919159243145">+91 9159243145</a>
+          </div>
+        </div>
+
+        <!-- Purple Button matching Image 3 -->
+        <a href="mailto:info.logivaultai@gmail.com?subject=Ragger.ai%20Inquiry" class="btn-mail-directly">
+          <i data-lucide="mail" style="width: 16px; height: 16px;"></i>
+          <span>MAIL US DIRECTLY</span>
+        </a>
+      </div>
+
+      <!-- Enterprise & Embedded Subcard (Image 3) -->
+      <div class="enterprise-card">
+        <div class="enterprise-badge">ENTERPRISE & EMBEDDED</div>
+        <h3 class="enterprise-title">Custom Offline AI Integrations</h3>
+        <p class="enterprise-desc">
+          Interested in custom quantized local models, proprietary air-gapped terminal setups, or multi-seat on-premise RAG deployments for your organization? Mention your use case in your message.
+        </p>
+      </div>
+    </div>
+
+    <!-- Right Column: Send a Message Form (Image 3) -->
+    <div class="form-card">
+      <h2 style="font-size: 22px; font-weight: 800; color: #0F172A; margin-bottom: 24px;">Send a Message</h2>
+      
+      <form id="contact-form" onsubmit="handleFormSubmit(event)">
+        <div class="form-group">
+          <label for="name">YOUR NAME</label>
+          <input type="text" id="name" name="name" class="form-input" placeholder="Alex Morgan" required>
+        </div>
+
+        <div class="form-group">
+          <label for="email">EMAIL ADDRESS</label>
+          <input type="email" id="email" name="email" class="form-input" placeholder="alex@example.com" required>
+        </div>
+
+        <div class="form-group">
+          <label for="subject">SUBJECT</label>
+          <input type="text" id="subject" name="subject" class="form-input" placeholder="Ragger.ai Deployment Question" required>
+        </div>
+
+        <div class="form-group">
+          <label for="message">MESSAGE</label>
+          <textarea id="message" name="message" class="form-textarea" placeholder="How does Ragger.ai handle local dense index synchronization..." required></textarea>
+        </div>
+
+        <button type="submit" class="btn-send-inquiry" id="submit-inquiry-btn">
+          <i data-lucide="send" style="width: 16px; height: 16px;"></i>
+          <span>SEND INQUIRY VIA EMAIL</span>
+        </button>
+      </form>
+    </div>
+  </main>
+
+  <!-- =========================================================================
+       FOOTER (EXACT REPLICATION of reference Image 2)
+       ========================================================================= -->
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <!-- Col 1: Brand Info -->
+      <div class="footer-col-brand">
+        <div class="footer-brand-header">
+          <img src="assets/ragger.ai_box_logo.png" alt="Ragger.ai" style="width: 36px; height: 36px; border-radius: 8px; object-fit: contain;">
+          <div class="footer-brand-title">Ragger<span>.ai</span></div>
+        </div>
+        <p class="footer-brand-desc">
+          Local-first desktop RAG platform for Windows. Turn your enterprise documents into high-precision sovereign knowledge with zero cloud leakage.
+        </p>
+        <div class="footer-badge-green">
+          <i data-lucide="shield-check" style="width: 16px; height: 16px;"></i>
+          <span>LOCAL-FIRST ARCHITECTURE</span>
+        </div>
+      </div>
+
+      <!-- Col 2: PAGES Column -->
+      <div class="footer-col-pages">
+        <div class="footer-col-title">PAGES</div>
+        <ul class="footer-nav-list">
+          <li><a href="index.html#overview">Overview</a></li>
+          <li><a href="index.html#how-it-works">How It Works</a></li>
+          <li><a href="index.html#features">Features</a></li>
+          <li><a href="index.html#architecture">Architecture</a></li>
+          <li><a href="index.html#faq">FAQ</a></li>
+          <li><a href="javascript:void(0)" onclick="triggerSetupDownload()">Download</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+      </div>
+
+      <!-- Col 3: SUPPORT & INQUIRIES -->
+      <div class="footer-col-support">
+        <div class="footer-col-title">SUPPORT & INQUIRIES</div>
+        <div class="footer-support-header">LogiVault AI</div>
+        <p class="footer-support-desc">
+          Ragger.ai is powered by LogiVault AI. Private, hardware-native desktop AI & document knowledge architectures.
+        </p>
+        <ul class="footer-contact-list">
+          <li class="footer-contact-item">
+            <i data-lucide="mail" style="width: 16px; height: 16px; color: #64748B;"></i>
+            <a href="mailto:info.logivaultai@gmail.com">info.logivaultai@gmail.com</a>
+          </li>
+          <li class="footer-contact-item">
+            <i data-lucide="phone" style="width: 16px; height: 16px; color: #64748B;"></i>
+            <a href="tel:+919159243145">+91 9159243145</a>
+          </li>
+          <li class="footer-contact-item">
+            <i data-lucide="instagram" style="width: 16px; height: 16px; color: #64748B;"></i>
+            <a href="https://instagram.com/logivault.ai" target="_blank" rel="noopener">@logivault.ai <i data-lucide="arrow-up-right" style="width: 12px; height: 12px;"></i></a>
+          </li>
+          <li class="footer-contact-item">
+            <i data-lucide="github" style="width: 16px; height: 16px; color: #64748B;"></i>
+            <a href="https://github.com/Pottrivendhan/Ragger.Ai" target="_blank" rel="noopener">github.com/Pottrivendhan/Ragger.Ai <i data-lucide="arrow-up-right" style="width: 12px; height: 12px;"></i></a>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Bottom copyright -->
+    <div class="footer-bottom-line">
+      <div>© 2026 LogiVault AI. All rights reserved. Built with pride for local-first intelligence.</div>
+      <div>Designed with Sarvam & Ragger Glassmorphic Design System.</div>
+    </div>
+  </footer>
+
+  <script>
+    // Initialize Lucide icons
+    lucide.createIcons();
+
+    // Trigger download function from drive
+    function triggerSetupDownload() {
+      const driveFileId = '1twtaiEi4LwpBgiMyHRCXl0uHfRqXV8FP';
+      const directDownloadUrl = `https://drive.google.com/uc?export=download&id=${driveFileId}`;
+      const viewUrl = 'https://drive.google.com/file/d/1twtaiEi4LwpBgiMyHRCXl0uHfRqXV8FP/view?usp=sharing';
+
+      const tempLink = document.createElement('a');
+      tempLink.href = directDownloadUrl;
+      tempLink.setAttribute('download', 'RaggerAI-Setup.exe');
+      tempLink.target = '_blank';
+      document.body.appendChild(tempLink);
+      tempLink.click();
+      document.body.removeChild(tempLink);
+
+      setTimeout(() => {
+        window.open(viewUrl, '_blank');
+      }, 1500);
+    }
+
+    // Compose inquiry email on submit
+    function handleFormSubmit(e) {
+      e.preventDefault();
+      const name = document.getElementById('name').value;
+      const email = document.getElementById('email').value;
+      const subject = document.getElementById('subject').value;
+      const message = document.getElementById('message').value;
+
+      const bodyText = `Sender Name: ${name}\nSender Email: ${email}\n\nMessage:\n${message}`;
+      const mailtoUrl = `mailto:info.logivaultai@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(bodyText)}`;
+      
+      window.location.href = mailtoUrl;
+    }
+  </script>
+</body>
+</html>

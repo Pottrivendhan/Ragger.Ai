@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ragger.ai — Private, Local-First Desktop RAG Platform | LogiVault AI</title>
+  <meta name="description" content="Turn your enterprise & research data into an intelligent, private, local-first knowledge system. Single-click Windows installer powered by LogiVault AI.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <!-- Lucide Icons CDN -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body>
+
+  <!-- =========================================================================
+       FLOATING GLASS NAVBAR (Matches Image 1 layout)
+       ========================================================================= -->
+  <div class="nav-container-wrapper">
+    <header class="floating-navbar">
+      <a href="index.html" class="nav-brand" id="brand-logo-link">
+        <img src="assets/ragger.ai_box_logo.png" alt="Ragger.ai" style="width: 32px; height: 32px; border-radius: 8px; object-fit: contain;">
+        <span class="nav-brand-title">Ragger<span>.ai</span></span>
+      </a>
+
+      <nav>
+        <ul class="nav-links">
+          <li><a href="#overview" class="active">Overview</a></li>
+          <li><a href="#how-it-works">How It Works</a></li>
+          <li><a href="#features">Features</a></li>
+          <li><a href="#architecture">Architecture</a></li>
+          <li><a href="#faq">FAQ</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div class="nav-actions">
+        <!-- Live Status Pill (Matches reference image 1: LAN LINK / LOCAL-FIRST) -->
+        <div class="nav-status-pill">
+          <span class="status-dot"></span>
+          <span>LOCAL-FIRST ENGINE</span>
+        </div>
+
+        <!-- Download Action Button -->
+        <button id="nav-download-btn" class="btn-primary-orange" onclick="triggerSetupDownload()">
+          <i data-lucide="download" style="width: 16px; height: 16px;"></i>
+          <span>Download</span>
+        </button>
+      </div>
+    </header>
+  </div>
+
+  <!-- =========================================================================
+       HERO SECTION (Matches Reference Image 1 structure & typography)
+       "Your phone. Your controls. Your screen." -> "Your data. Your models. Your workstation."
+       ========================================================================= -->
+  <main>
+    <section class="hero-section" id="overview">
+      <!-- Top Badges / Pills -->
+      <div class="hero-pill-group">
+        <span class="hero-pill hero-pill-orange">
+          <i data-lucide="shield-check" style="width: 14px; height: 14px;"></i>
+          100% PRIVATE
+        </span>
+        <span class="hero-pill hero-pill-blue">
+          <i data-lucide="cpu" style="width: 14px; height: 14px;"></i>
+          LOCAL GGUF RUNTIME
+        </span>
+        <span class="hero-pill hero-pill-green">
+          <i data-lucide="lock" style="width: 14px; height: 14px;"></i>
+          ZERO CLOUD LEAKAGE
+        </span>
+      </div>
+
+      <!-- Main Headline matching image 1 typography -->
+      <h1 class="hero-title">
+        Your data. Your models.
+        <span class="highlight-orange">Your workstation.</span>
+      </h1>
+
+      <p class="hero-subtitle">
+        Turn your enterprise, legal & research data into a private, local-first RAG intelligence system on Windows. Zero cloud APIs, full citations, and strict provenance.
+      </p>
+
+      <!-- CTA Buttons matching image 1 -->
+      <div class="hero-cta-group">
+        <button id="hero-download-btn" class="btn-primary-orange" style="padding: 14px 32px; font-size: 15px;" onclick="triggerSetupDownload()">
+          <i data-lucide="download" style="width: 18px; height: 18px;"></i>
+          <span>Download for Windows</span>
+        </button>
+        <a href="#how-it-works" class="btn-secondary" style="padding: 14px 28px; font-size: 15px;">
+          <span>See how it works</span>
+          <i data-lucide="arrow-right" style="width: 16px; height: 16px;"></i>
+        </a>
+      </div>
+
+      <div class="hero-subtext">
+        Windows x64 • Standalone Setup.exe • Hermetic Python + Electron Runtime
+      </div>
+
+      <!-- Glassmorphic App Interface Preview Mockup -->
+      <div class="hero-mockup-wrapper">
+        <div class="hero-mockup-inner" style="padding: 24px; text-align: left;">
+          <div style="display: flex; align-items: center; justify-content: space-between; border-bottom: 1px solid #E2E8F0; padding-bottom: 14px; margin-bottom: 20px;">
+            <div style="display: flex; align-items: center; gap: 8px;">
+              <span style="width: 10px; height: 10px; border-radius: 50%; background: #EF4444;"></span>
+              <span style="width: 10px; height: 10px; border-radius: 50%; background: #F59E0B;"></span>
+              <span style="width: 10px; height: 10px; border-radius: 50%; background: #10B981;"></span>
+              <span style="font-size: 12px; font-weight: 700; color: #475569; margin-left: 10px;">Ragger.ai Agent Studio — Grounded Query Engine</span>
+            </div>
+            <span style="font-size: 11px; font-weight: 700; color: #059669; background: #ECFDF5; padding: 4px 10px; border-radius: 9999px;">
+              Qwen2.5-1.5B • FAISS Dense Index
+            </span>
+          </div>
+          <div style="display: grid; grid-template-columns: 240px 1fr; gap: 20px;">
+            <div style="background: #F8FAFC; border-radius: 12px; padding: 14px; border: 1px solid #E2E8F0;">
+              <div style="font-size: 11px; font-weight: 800; color: #64748B; text-transform: uppercase; margin-bottom: 10px;">Attached Knowledge</div>
+              <div style="padding: 8px 10px; background: #FFFFFF; border-radius: 8px; border: 1px solid #E2E8F0; font-size: 12px; font-weight: 600; color: #0F172A; margin-bottom: 8px; display: flex; align-items: center; gap: 6px;">
+                <i data-lucide="file-text" style="width: 14px; height: 14px; color: #4F46E5;"></i>
+                Q3 Financial Report.pdf
+              </div>
+              <div style="padding: 8px 10px; background: #FFFFFF; border-radius: 8px; border: 1px solid #E2E8F0; font-size: 12px; font-weight: 600; color: #0F172A; display: flex; align-items: center; gap: 6px;">
+                <i data-lucide="database" style="width: 14px; height: 14px; color: #FF5500;"></i>
+                Product Knowledge Base
+              </div>
+            </div>
+            <div style="display: flex; flex-direction: column; gap: 12px;">
+              <div style="align-self: flex-end; background: #EEF2FF; border: 1px solid #C7D2FE; padding: 10px 16px; border-radius: 12px 12px 2px 12px; font-size: 13.5px; color: #1E1B4B; max-width: 80%;">
+                What were our core enterprise growth drivers in Q3, and what are the exact citations?
+              </div>
+              <div style="align-self: flex-start; background: #F8FAFC; border: 1px solid #E2E8F0; padding: 14px 18px; border-radius: 12px 12px 12px 2px; font-size: 13.5px; color: #0F172A; line-height: 1.6; max-width: 90%;">
+                According to the Q3 Financial Report, revenue grew by <strong>42% quarter-over-quarter</strong> driven primarily by enterprise desktop security adoption and on-premise AI deployments. All metrics were computed locally with zero cloud transmission.
+                <div style="margin-top: 10px; padding-top: 8px; border-top: 1px solid #E2E8F0; font-size: 11.5px; color: #059669; font-weight: 700; display: flex; align-items: center; gap: 4px;">
+                  <i data-lucide="check-circle" style="width: 14px; height: 14px;"></i>
+                  Verified Grounded Claim • Source: Q3 Financial Report [Section 4.2]
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================================
+         HOW IT WORKS SECTION
+         ========================================================================= -->
+    <section class="section-wrapper" id="how-it-works">
+      <div class="section-header">
+        <span class="section-badge">Autonomous Workflow</span>
+        <h2 class="section-title">How Ragger.ai Works</h2>
+        <p class="section-desc">
+          From heterogeneous raw files to conversational local agents in four deterministic steps.
+        </p>
+      </div>
+
+      <div class="steps-grid">
+        <div class="step-card glass-card">
+          <div class="step-number">01</div>
+          <h3 class="step-title">14-Format Ingestion</h3>
+          <p class="step-text">
+            Drop PDFs, Word documents, spreadsheets, presentations, markdown, or JSON files. Deterministic SHA-256 chunking preserves layout boundaries.
+          </p>
+        </div>
+
+        <div class="step-card glass-card">
+          <div class="step-number">02</div>
+          <h3 class="step-title">Heuristic Analysis</h3>
+          <p class="step-text">
+            The automated corpus analyzer examines structural depth, density, and modality to recommend optimal RAG strategies without hallucinations.
+          </p>
+        </div>
+
+        <div class="step-card glass-card">
+          <div class="step-number">03</div>
+          <h3 class="step-title">Local Dense Indexing</h3>
+          <p class="step-text">
+            Compiles dense embeddings directly onto host storage using FAISS and local ONNX embedding models with atomic hot-reload swapping.
+          </p>
+        </div>
+
+        <div class="step-card glass-card">
+          <div class="step-number">04</div>
+          <h3 class="step-title">Grounded Generation</h3>
+          <p class="step-text">
+            Stream answers from local GGUF models (Qwen, Llama). Internal provenance is verified while outputting pristine natural language.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================================
+         FEATURES SECTION
+         ========================================================================= -->
+    <section class="section-wrapper" id="features" style="background: rgba(255, 255, 255, 0.6); border-radius: 32px; border: 1px solid rgba(226, 232, 240, 0.6);">
+      <div class="section-header">
+        <span class="section-badge">Enterprise Capabilities</span>
+        <h2 class="section-title">Engineered for Sovereign Knowledge</h2>
+        <p class="section-desc">
+          Built from the ground up for strict confidentiality, zero external dependencies, and precision facts.
+        </p>
+      </div>
+
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 24px;">
+        <div class="glass-card" style="padding: 28px;">
+          <div style="width: 44px; height: 44px; border-radius: 12px; background: #FFF7ED; color: #FF5500; display: flex; align-items: center; justify-content: center; margin-bottom: 18px;">
+            <i data-lucide="shield-alert" style="width: 22px; height: 22px;"></i>
+          </div>
+          <h3 style="font-size: 18px; font-weight: 800; color: #0F172A; margin-bottom: 8px;">Zero Hallucinated Citations</h3>
+          <p style="font-size: 14px; color: #64748B; line-height: 1.6;">
+            Every statement is strictly linked to source chunks. If the retrieved evidence does not support an answer, Ragger.ai explicitly warns the user instead of fabricating.
+          </p>
+        </div>
+
+        <div class="glass-card" style="padding: 28px;">
+          <div style="width: 44px; height: 44px; border-radius: 12px; background: #EEF2FF; color: #4F46E5; display: flex; align-items: center; justify-content: center; margin-bottom: 18px;">
+            <i data-lucide="hard-drive-download" style="width: 22px; height: 22px;"></i>
+          </div>
+          <h3 style="font-size: 18px; font-weight: 800; color: #0F172A; margin-bottom: 8px;">Hardware-Aware Model Hub</h3>
+          <p style="font-size: 14px; color: #64748B; line-height: 1.6;">
+            Direct download and management of quantized GGUF weights. Built-in system prober grades host CPU, RAM, and GPU VRAM to ensure smooth execution.
+          </p>
+        </div>
+
+        <div class="glass-card" style="padding: 28px;">
+          <div style="width: 44px; height: 44px; border-radius: 12px; background: #ECFDF5; color: #059669; display: flex; align-items: center; justify-content: center; margin-bottom: 18px;">
+            <i data-lucide="messages-square" style="width: 22px; height: 22px;"></i>
+          </div>
+          <h3 style="font-size: 18px; font-weight: 800; color: #0F172A; margin-bottom: 8px;">Studio Agent Workspace</h3>
+          <p style="font-size: 14px; color: #64748B; line-height: 1.6;">
+            Interactive conversational workspace featuring instant message termination, question editing, multi-knowledge attachment, and streaming token responses.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================================
+         ARCHITECTURE SECTION
+         ========================================================================= -->
+    <section class="section-wrapper" id="architecture">
+      <div class="section-header">
+        <span class="section-badge">System Design</span>
+        <h2 class="section-title">Hermetic 3-Tier Architecture</h2>
+        <p class="section-desc">
+          Isolated processes communicate over authenticated loopback HTTP with 256-bit cryptographic bearer tokens.
+        </p>
+      </div>
+
+      <div class="architecture-card">
+        <div class="arch-grid">
+          <div>
+            <div class="arch-item">
+              <div class="arch-icon-wrap"><i data-lucide="layout" style="width: 20px; height: 20px;"></i></div>
+              <div class="arch-content">
+                <h4>React 18 + Vite Desktop Shell</h4>
+                <p>Tailored glassmorphic UI with zero telemetry, high-density tables, and immediate response rendering.</p>
+              </div>
+            </div>
+
+            <div class="arch-item">
+              <div class="arch-icon-wrap" style="background: #EEF2FF; color: #4F46E5; border-color: #E0E7FF;"><i data-lucide="shield" style="width: 20px; height: 20px;"></i></div>
+              <div class="arch-content">
+                <h4>Electron Process Supervisor</h4>
+                <p>Spawns and monitors the Python engine on an OS-assigned ephemeral loopback port with auto-cleanup on exit.</p>
+              </div>
+            </div>
+
+            <div class="arch-item">
+              <div class="arch-icon-wrap" style="background: #ECFDF5; color: #059669; border-color: #D1FAE5;"><i data-lucide="binary" style="width: 20px; height: 20px;"></i></div>
+              <div class="arch-content">
+                <h4>Frozen FastAPI Engine</h4>
+                <p>PyInstaller onedir distribution packaging native tokenizers, FAISS indexes, ONNX runtimes, and GGUF drivers.</p>
+              </div>
+            </div>
+          </div>
+
+          <div style="background: #0F172A; border-radius: 16px; padding: 24px; color: #E2E8F0; font-family: var(--font-mono); font-size: 12px; line-height: 1.7; box-shadow: inset 0 2px 10px rgba(0,0,0,0.5);">
+            <div style="color: #38BDF8; margin-bottom: 8px;">// Security Loopback & Process Contract</div>
+            <div>[Electron Shell]</div>
+            <div style="color: #94A3B8;">  │  (Auth Bearer 256-bit Token)</div>
+            <div style="color: #94A3B8;">  ▼  (127.0.0.1 : Ephemeral Port)</div>
+            <div>[FastAPI Engine - Frozen Python]</div>
+            <div style="color: #94A3B8;">  ├── Ingestion (14 formats)</div>
+            <div style="color: #94A3B8;">  ├── FAISS Dense Vectors</div>
+            <div style="color: #94A3B8;">  ├── Local GGUF Engine</div>
+            <div style="color: #94A3B8;">  └── Zero Cloud Network Sockets</div>
+            <div style="margin-top: 14px; color: #4ADE80;">✓ 185/185 Regression Tests Locked</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================================
+         FAQ SECTION
+         ========================================================================= -->
+    <section class="section-wrapper" id="faq">
+      <div class="section-header">
+        <span class="section-badge">Frequently Asked Questions</span>
+        <h2 class="section-title">Common Questions</h2>
+        <p class="section-desc">Everything you need to know about setting up and running Ragger.ai locally.</p>
+      </div>
+
+      <div class="faq-grid">
+        <div class="faq-item open">
+          <button class="faq-question" onclick="toggleFaq(this)">
+            <span>Does Ragger.ai require Python or Node.js to be installed?</span>
+            <i data-lucide="chevron-down" class="faq-chevron"></i>
+          </button>
+          <div class="faq-answer">
+            No! Ragger.ai is shipped as a completely standalone, hermetic Windows application (`RaggerAI-Setup.exe`). It bundles its own frozen Python runtime, dependencies, and desktop interface. You can run it on any standard Windows 10/11 x64 machine.
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question" onclick="toggleFaq(this)">
+            <span>Are any of my documents or questions sent to the cloud?</span>
+            <i data-lucide="chevron-down" class="faq-chevron"></i>
+          </button>
+          <div class="faq-answer">
+            Zero cloud leakage. Parsing, embedding, vector indexing, retrieval, and LLM text generation all execute strictly on your computer's local CPU/GPU and local storage. No data ever leaves your computer.
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question" onclick="toggleFaq(this)">
+            <span>Where do the AI models come from?</span>
+            <i data-lucide="chevron-down" class="faq-chevron"></i>
+          </button>
+          <div class="faq-answer">
+            To keep the initial setup installer fast and compact, model weights are excluded from git. You can download and manage verified GGUF and ONNX models directly inside the application using the integrated Local AI Model Manager.
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question" onclick="toggleFaq(this)">
+            <span>What hardware is recommended?</span>
+            <i data-lucide="chevron-down" class="faq-chevron"></i>
+          </button>
+          <div class="faq-answer">
+            Any modern 64-bit Windows PC with 8GB RAM minimum (16GB RAM recommended). For faster local generation, dedicated NVIDIA GPU (4GB+ VRAM) or modern multi-core processors provide excellent real-time performance.
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Bottom CTA Banner -->
+    <section class="section-wrapper" style="padding-top: 0;">
+      <div style="background: linear-gradient(135deg, #0F172A, #1E293B); border-radius: var(--radius-xl); padding: 50px 32px; text-align: center; color: #FFFFFF; box-shadow: var(--shadow-elevated);">
+        <h2 style="font-size: 32px; font-weight: 800; margin-bottom: 12px;">Ready to run private local RAG?</h2>
+        <p style="font-size: 15px; color: #94A3B8; max-width: 540px; margin: 0 auto 28px;">
+          Download the standalone setup package and experience sovereign, hallucination-free document intelligence in minutes.
+        </p>
+        <button class="btn-primary-orange" style="padding: 14px 36px; font-size: 16px;" onclick="triggerSetupDownload()">
+          <i data-lucide="download" style="width: 18px; height: 18px;"></i>
+          <span>Download RaggerAI-Setup.exe</span>
+        </button>
+      </div>
+    </section>
+  </main>
+
+  <!-- =========================================================================
+       FOOTER (EXACT REPLICATION of reference Image 2)
+       ========================================================================= -->
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <!-- Col 1: Brand Info (Image 2 style) -->
+      <div class="footer-col-brand">
+        <div class="footer-brand-header">
+          <img src="assets/ragger.ai_box_logo.png" alt="Ragger.ai" style="width: 36px; height: 36px; border-radius: 8px; object-fit: contain;">
+          <div class="footer-brand-title">Ragger<span>.ai</span></div>
+        </div>
+        <p class="footer-brand-desc">
+          Local-first desktop RAG platform for Windows. Turn your enterprise documents into high-precision sovereign knowledge with zero cloud leakage.
+        </p>
+        <div class="footer-badge-green">
+          <i data-lucide="shield-check" style="width: 16px; height: 16px;"></i>
+          <span>LOCAL-FIRST ARCHITECTURE</span>
+        </div>
+      </div>
+
+      <!-- Col 2: PAGES Column (Matches reference image 2) -->
+      <div class="footer-col-pages">
+        <div class="footer-col-title">PAGES</div>
+        <ul class="footer-nav-list">
+          <li><a href="#overview">Overview</a></li>
+          <li><a href="#how-it-works">How It Works</a></li>
+          <li><a href="#features">Features</a></li>
+          <li><a href="#architecture">Architecture</a></li>
+          <li><a href="#faq">FAQ</a></li>
+          <li><a href="javascript:void(0)" onclick="triggerSetupDownload()">Download</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+      </div>
+
+      <!-- Col 3: SUPPORT & INQUIRIES (Matches reference image 2 exactly) -->
+      <div class="footer-col-support">
+        <div class="footer-col-title">SUPPORT & INQUIRIES</div>
+        <div class="footer-support-header">LogiVault AI</div>
+        <p class="footer-support-desc">
+          Ragger.ai is powered by LogiVault AI. Private, hardware-native desktop AI & document knowledge architectures.
+        </p>
+        <ul class="footer-contact-list">
+          <li class="footer-contact-item">
+            <i data-lucide="mail" style="width: 16px; height: 16px; color: #64748B;"></i>
+            <a href="mailto:info.logivaultai@gmail.com">info.logivaultai@gmail.com</a>
+          </li>
+          <li class="footer-contact-item">
+            <i data-lucide="phone" style="width: 16px; height: 16px; color: #64748B;"></i>
+            <a href="tel:+919159243145">+91 9159243145</a>
+          </li>
+          <li class="footer-contact-item">
+            <i data-lucide="instagram" style="width: 16px; height: 16px; color: #64748B;"></i>
+            <a href="https://instagram.com/logivault.ai" target="_blank" rel="noopener">@logivault.ai <i data-lucide="arrow-up-right" style="width: 12px; height: 12px;"></i></a>
+          </li>
+          <li class="footer-contact-item">
+            <i data-lucide="github" style="width: 16px; height: 16px; color: #64748B;"></i>
+            <a href="https://github.com/Pottrivendhan/Ragger.Ai" target="_blank" rel="noopener">github.com/Pottrivendhan/Ragger.Ai <i data-lucide="arrow-up-right" style="width: 12px; height: 12px;"></i></a>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Bottom copyright -->
+    <div class="footer-bottom-line">
+      <div>© 2026 LogiVault AI. All rights reserved. Built with pride for local-first intelligence.</div>
+      <div>Designed with Sarvam & Ragger Glassmorphic Design System.</div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script>
+    // Initialize Lucide icons
+    lucide.createIcons();
+
+    // Auto-trigger direct download from Google Drive link provided by user
+    function triggerSetupDownload() {
+      // Direct download URL for Google Drive file
+      const driveFileId = '1twtaiEi4LwpBgiMyHRCXl0uHfRqXV8FP';
+      const directDownloadUrl = `https://drive.google.com/uc?export=download&id=${driveFileId}`;
+      const viewUrl = 'https://drive.google.com/file/d/1twtaiEi4LwpBgiMyHRCXl0uHfRqXV8FP/view?usp=sharing';
+
+      // Create a temporary link element to prompt download
+      const tempLink = document.createElement('a');
+      tempLink.href = directDownloadUrl;
+      tempLink.setAttribute('download', 'RaggerAI-Setup.exe');
+      tempLink.target = '_blank';
+      document.body.appendChild(tempLink);
+      tempLink.click();
+      document.body.removeChild(tempLink);
+
+      // In case Google Drive shows a virus scan confirmation for large binaries (>100MB),
+      // we provide a smooth fallback opening the direct drive view in a separate tab after 1.5s
+      setTimeout(() => {
+        window.open(viewUrl, '_blank');
+      }, 1500);
+    }
+
+    // FAQ Accordion Toggle
+    function toggleFaq(btn) {
+      const item = btn.parentElement;
+      item.classList.toggle('open');
+    }
+  </script>
+</body>
+</html>
