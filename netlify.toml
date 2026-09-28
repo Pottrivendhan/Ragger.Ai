@@ -1,0 +1,10 @@
+[build]
+  # When deploying the public product website:
+  publish = "website"
+
+# Redirect rules ensuring smooth single-page / hash routing and direct access
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
+  conditions = {Role = ["*"]}
