@@ -1031,6 +1031,16 @@ body {
   font-weight: 800;
   color: #0F172A;
   margin-bottom: 6px;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  text-decoration: none;
+  transition: color 0.2s ease, transform 0.2s ease;
+}
+
+.footer-support-header:hover {
+  color: var(--accent-blue);
+  transform: translateX(2px);
 }
 
 .footer-support-desc {
